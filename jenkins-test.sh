@@ -3,7 +3,7 @@
 echo 'testing...'
 ls . > test.txt
 
-head -3 test.txt |
+head -5 test.txt |
 while read line; do
   echo $line;
 done
