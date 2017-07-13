@@ -3,8 +3,10 @@
 echo 'testing...'
 ls . > test.txt
 
-read -r line < test.txt
-echo $line
+head -3 test.txt |
+while read line; do
+  echo $line;
+done
 
 # Not proper bash...
 #node('amd64 && docker') {
