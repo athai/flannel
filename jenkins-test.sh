@@ -2,6 +2,8 @@
 
 echo 'testing...'
 
+rm -f -- test.txt
+
 cd Documentation
 ls . > ../test.txt
 cd ..
