@@ -2,20 +2,16 @@
 
 echo 'testing...'
 
-rm -f -- test.txt
+rm -f -- marker-ouptut.txt
 
 cd Documentation
-ls . > ../test.txt
+marker > ../marker-output.txt
 cd ..
 
-head -7 test.txt |
-
-echo 'TODO: figure out a less trivial test'
-
-if grep "Kubernetes.md" test.txt; then
-  echo "String found"
+if grep "broken" marker-output.txt; then
+  echo "WARNING: Broken reference/path/url found"
 else
-  echo "Something's wrong..."
+  echo "Good to go"
 fi
 
 # Not proper bash...
