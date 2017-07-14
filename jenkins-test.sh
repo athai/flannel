@@ -1,7 +1,10 @@
 #!/bin/bash
 
 echo 'testing...'
-ls . > test.txt
+
+cd Documentation
+ls . > ../test.txt
+cd ..
 
 head -7 test.txt |
 while read line; do
